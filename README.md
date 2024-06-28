@@ -13,6 +13,7 @@ This project aims to detect deepfake audio clips by leveraging Convolutional Neu
 # Data Preprocessing
 
 Audio Clips: The audio data is divided into 2-second clips to ensure uniformity and manageability.
+
 Spectrogram Conversion: Each audio clip is converted into a spectrogram, which visually represents the frequency spectrum of the audio signal over time. This conversion transforms the problem into an image classification task suitable for CNNs.
 
 # Model Architecture
@@ -20,9 +21,13 @@ Spectrogram Conversion: Each audio clip is converted into a spectrogram, which v
 A Convolutional Neural Network (CNN) is designed to classify the spectrograms. The general architecture of a CNN includes:
 
 Convolutional Layers: These layers apply convolutional filters to the input images (spectrograms) to extract features such as edges, textures, and patterns.
+
 Activation Functions: Typically, ReLU (Rectified Linear Unit) is used to introduce non-linearity.
+
 Pooling Layers: These layers downsample the feature maps, reducing the spatial dimensions and retaining the most important information.
+
 Fully Connected Layers: These layers act as classifiers on the extracted features.
+
 Output Layer: The final layer uses a softmax activation function to provide probability scores for classification.
 
 # Training and Evaluation
@@ -30,6 +35,7 @@ Output Layer: The final layer uses a softmax activation function to provide prob
 The model is trained using a labeled dataset of real and deepfake audio clips. The training process involves:
 
 Loss Function: Cross-entropy loss is used to measure the difference between the predicted and actual labels.
+
 Optimizer: Adam optimizer is used to adjust the weights of the network based on the loss function.
 
 # Results
